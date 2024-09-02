@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Time manager</title>
+</head>
+<body>   
+    <h1>WELCOME TO MANAGER</h1> 
+<input type="text" id="task-name" placeholder="Task Name">
+<input type="time" id="start-time">
+<input type="time" id="end-time">
+<select id="priority">
+    <option value="Low" class="priority-low">Low</option>
+    <option value="Medium-Low" class="priority-medium-low">Medium-Low</option>
+    <option value="Medium" class="priority-medium">Medium</option>
+    <option value="Medium-High" class="priority-medium-high">Medium-High</option>
+    <option value="High" class="priority-high">High</option>
+</select>
+<input type="text" id="status" placeholder="Status">
+<input type="text" id="notes" placeholder="Notes">
+<button onclick="addTask()">Add Task</button>
+
+<table id="taskTable">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Notes</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Tasks will go here -->
+    </tbody>
+</table>
+    <script src="main.js"></script>
+</body>
+</html>

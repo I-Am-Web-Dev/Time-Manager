@@ -1,0 +1,358 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General font styling for the entire document */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333; /* Text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    background-color: #f0f0f0; /* Secondary color for the background */
+    margin: 0;
+    padding: 2vw;
+    line-height: 1.6;
+    border-collapse: collapse;
+}
+
+/* Priority-specific font adjustments */
+.low, .mediumlow, .medium, .mediumhigh, .high {
+    font-weight: bold; /* Make the priority stand out */
+    font-size: 1rem; /* Consistent with the rest of the table */
+}
+
+table {
+    width: 100%;
+    color: #555;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    background-color: #f0f0f0; /* White for table background */font-family: 'Arial', sans-serif; /* or any other preferred font */
+    font-size: 1rem;    
+    line-height: 1.6;
+}
+
+th, td {
+    width: 14.07%;
+    word-wrap: break-word; /* Breaks long words */
+    overflow-wrap: break-word; /* Prevents overflow of long words */
+    white-space: normal; /* Allows text to wrap to the next line */
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bolder for emphasis */
+    color: #111; /* Default text color */
+    padding: 1vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #555;
+    border-bottom: 0.1rem solid #555;
+    border-radius: 0.4rem;
+    background-color: #f7f7f7;
+
+}
+.delete-button {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+#task-name {
+    width: 14.07%;
+    padding: 0.8vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#start-time, #end-time {
+    width: 14.07%;
+    padding: 0.8vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+#priority {
+    width: 14.07%;
+    padding: 0.8vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+#status {
+    width: 14.07%;
+    padding: 0.8vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#notes {
+    width: 14.07%;
+    padding: 0.8vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#priority option {
+    font-size: 1rem;
+}
+
+/* General input field styling */
+input[type="text"], select {
+    font-family: 'Arial', sans-serif; /* Use a clean and readable font */
+    font-size: 1rem; /* Match with other elements */
+    font-weight: 500; /* Slightly bolder for emphasis */
+    color: #333; /* Darker text for readability */
+    padding: 1vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+}
+
+/* Placeholder styling for a softer look */
+input[type="text"]::placeholder {
+    color: #999; /* Lighter color for placeholder text */
+    font-style: italic; /* Italicized placeholder */
+    background-color: #f9f9f9;
+}
+
+/* Specific styling for select dropdown */
+select {
+    background-color: #f9f9f9; /* Slight background color for differentiation */
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus, select:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bolder for emphasis */
+    color: #333; /* Default text color */
+    padding: 1vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: right 1vw center;
+}
+
+/* Button Styling */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1vw 2vw;
+    background-color: #4CAF50; /* Primary green color */
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Slightly darker green for hover state */
+}
+
+/* Color Coding for Priorities */
+.priority-low {
+    color: green;
+}
+
+.priority-medium-low {
+    color: yellowgreen;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-medium-high {
+    color: orangered;
+}
+
+.priority-high {
+    color: red;
+}
+.low{
+    color: green;
+
+}
+
+.mediumlow{
+    color: yellowgreen;
+
+}
+
+.medium{
+    color: orange;
+
+}
+
+.mediumhigh{
+    color: orangered;
+
+}
+
+.high {
+    color: red;
+
+}
+/* Priority styling 
+/* General styling for the priority dropdown */
+#priority {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bolder for emphasis */
+    color: #333; /* Default text color */
+    padding: 1vw;
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: right 1vw center;
+}
+
+/* Styling for each option in the dropdown */
+
+#priority option {
+    font-size: 1rem; /* Consistent with other inputs */
+    font-weight: bold; /* Bold text to differentiate priorities */
+}
+
+/* Mobile adjustments 
+
+/* For tablets and small screens */
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1.5vw;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.8vw;
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], select, button {
+        font-size: 0.9rem;
+        padding: 0.8vw;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.8vw 1.6vw;
+    }
+}
+
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 1vw;
+    }
+
+    table {
+        font-size: 0.9rem; /* Adjust font size for readability on small screens */
+    }
+
+    th, td {
+        padding: 0.8vw; /* Adjust padding to fit content */
+        font-size: 0.9rem; /* Smaller font size */
+        width: auto; /* Adjust column width to fit content */
+    }
+
+    input[type="text"], select, button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 0.8vw; /* Increase padding for better touch targets */
+    }
+
+    /* Ensure that the task form elements stack vertically on small screens */
+    #task-name, #start-time, #end-time, #priority, #status, #notes {
+        width: 100%; /* Full width on small screens */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+    /* Adjust button styling for mobile screens */
+    button {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        padding: 0.8vw 1.6vw; /* Larger padding for easier tapping */
+    }
+}
+
+/* Makes the table horizontally scrollable on small screens */
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Prevents wrapping */
+    }
+    
+    th, td {
+        display: inline-block;
+        width: auto; /* Adjusts width to fit content */
+    }
+}
+
+button, input[type="text"], select {
+    font-size: 1rem; /* Adequate size for readability */
+    padding: 1vw; /* Increased padding for easier interaction */
+    margin: 0.5vw 0;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+}
+
+/* For very small screens and smartphones */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 1vw;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5vw;
+        font-size: 0.8rem;
+    }
+
+    input[type="text"], select, button {
+        font-size: 0.8rem;
+        padding: 0.5vw;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 0.5vw 1.2vw;
+    }
+
+    /* Stack input fields vertically on very small screens */
+    #task-name, #start-time, #end-time, #priority, #status, #notes {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin: 0.5vw 0;
+    }
+}
